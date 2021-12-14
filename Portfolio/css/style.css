@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1rem;
+    background-image: url(../assets/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+
+section {
+    padding-top: 3.125rem;
+    padding-bottom: 4.375rem;
+}
+
+footer {
+    padding-top: 3.125rem;
+    padding-bottom: 1rem;
+
+}
+
+.section-h1 {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3.375rem;
+    color: #1d1e1f;
+    margin-bottom: 2.5rem;
+}
+
+/* NAVBAR */
+.navbar-toggler--nav,
+.navbar-toggler-icon {
+    transition: all .5s ease-in-out;
+}
+
+.navbar-toggler-icon {
+    display: block;
+    border-radius: 9999px;
+    background-color: black;
+}
+
+.navbar-toggler-icon:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+.navbar-toggler--nav.toggler-active {
+    transition-delay: .8s;
+    transform: rotate(45deg);
+}
+
+.navbar-toggler--nav.toggler-active>span:nth-child(2) {
+    width: 0;
+}
+
+.navbar-toggler--nav.toggler-active>span:nth-child(1),
+.navbar-toggler--nav.toggler-active>span:nth-child(3) {
+    transition-delay: .5s;
+}
+
+.navbar-toggler--nav.toggler-active>span:nth-child(1) {
+    transform: translateY(9px);
+}
+
+.navbar-toggler--nav.toggler-active>span:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg);
+}
+
+#navbar {
+    transition: padding-top 0.3s ease-in-out,
+        padding-bottom 0.3s ease-in-out;
+}
+
+#navbar.nav-collapse {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #4265E0;
+}
+
+#navbar.nav-collapse a {
+    color: white;
+}
+
+@media (max-width: 991px) {
+    #navbar {
+        background-color: #4265E0;
+    }
+
+    #navbar #navbarNav a {
+        color: white;
+    }
+}
+
+
+#navbarNav ul li a {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #2E3035;
+    transition: .4s;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+#navbar .container #navbarNav ul li a.active {
+    color: #FF9900;
+}
+
+#navbar .container #navbarNav ul li a:hover {
+    color: #FF9900;
+}
+
+@media (min-width: 992px) {
+    #navbarNav ul li a.active::after {
+        content: "";
+        background-color: #FF9900;
+        position: absolute;
+        width: 60%;
+        height: 0.2rem;
+        bottom: .5rem;
+        left: 20%;
+        transition: .4s;
+        border-radius: 100%;
+    }
+
+    #navbarNav ul li a::after {
+        content: "";
+        background-color: #FF9900;
+        position: absolute;
+        width: 0;
+        height: 0.2rem;
+        bottom: .5rem;
+        left: 20%;
+        transition: .4s;
+        border-radius: 100%;
+    }
+
+    #navbarNav ul li a:hover::after {
+        width: 60%;
+    }
+}
+
+/* Home */
+#home {
+    margin-top: 4rem;
+}
+
+.home-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .home-flex {
+        flex-direction: column-reverse;
+    }
+}
+
+.home-subheading {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: #000000;
+}
+
+.home-heading {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 6rem;
+    color: #4265E0;
+}
+
+.home-paragraph {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #2B364B;
+}
+
+
+
+.btn-primary {
+    background: linear-gradient(94.53deg, #FF9900 0%, #F12EF5 100%);
+    border-radius: 77px;
+    border: none;
+    transition: 5s;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.btn-primary:hover {
+    box-shadow: 0px 4px 4px rgba(241, 46, 245, 0.4), -3px -3px 8px rgba(255, 153, 0, 0.4);
+}
+
+/* Experience */
+#experience {
+    background-color: #E9EEFF;
+}
+
+.img-blur {
+    filter: grayscale(80%);
+    transition: .5s;
+    cursor: crosshair;
+    margin-bottom: 1.875rem;
+}
+
+.img-blur:hover {
+    transform: rotate(30deg) scale(1.1);
+    filter: none;
+}
+
+/* Portfolio */
+.padding-main {
+    padding-bottom: 1.876rem;
+}
+
+.card {
+    background-color: #454C53;
+    padding: 3.125rem;
+    width: auto;
+    height: auto;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-title {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    margin-bottom: 1.875rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.card-img-top {
+    margin-bottom: 3.125rem;
+}
+
+.card-img-top-lg {
+    margin-bottom: 1.5625rem;
+}
+
+.card-link {
+    color: #fff;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    transition: .4s;
+    position: relative;
+}
+
+.card-link:hover {
+    color: #9344fa;
+}
+
+#portfolio .card .card-body a {
+    padding-bottom: 1rem;
+}
+
+#portfolio .card .card-body a::after {
+    content: "";
+    background-color: #FF9900;
+    position: absolute;
+    width: 0;
+    height: 0.2rem;
+    bottom: .5rem;
+    left: 10%;
+    transition: .4s;
+    border-radius: 100%;
+}
+
+#portfolio .card .card-body a:hover::after {
+    width: 60%;
+}
+
+/* Contact */
+#contact {
+    background-color: #064add;
+}
+
+#contact hr {
+    margin-top: 3.125rem;
+    margin-bottom: 1rem;
+    background-color: #594D68;
+}
+
+#contact p {
+    color: white;
+}
+
+/* === ANIMATION === */
+.bounce-1 {
+    animation: bounce 2s 3s linear infinite;
+}
+
+.bounce-2 {
+    animation: bounce 4s 5s linear infinite;
+}
+
+@keyframes bounce {
+
+    20%,
+    50%,
+    80%,
+    to {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    70% {
+        transform: translateY(-15px);
+    }
+
+    90% {
+        transform: translateY(-4px);
+    }
+}
