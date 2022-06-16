@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBookShelf App - Ferdian Iqbal</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/logo.svg" />
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content">
+            <h1>Selamat Datang di Aplikasi BookShelf Kami</h1>
+            <p>Kelola bukumu semakin mudah dan tidak ribet.</p>
+        </div>
+    </nav>
+
+    <div class="container user-information">
+        <div class="user-img">
+            <img src="assets/images/ava.png" alt="Avatar" />
+        </div>
+        <h1 class="user-name">Muhammad Ferdian Iqbal</h1>
+        <p class="user-bio"><i class="bx bx-cool"></i> Student | Front-end Developer | UI Designer</p>
+    </div>
+
+    <div class="content">
+        <h2 class="intro">Mulai atur buku bacaanmu di sini</h2>
+
+        <div class="my-content">
+            <div class="col-1">
+                <div class="container user-data">
+                    <p>Jumlah Buku</p>
+                    <h4 id="jumlahBuku">-</h4>
+
+                    <div class="my-btn">
+                        <div class="my-btn-delete">
+                            <img src="assets/images/delete-btn.png" alt="" class="delete-btn">
+                            <h5>delete</h5>
+                        </div>
+                        <div class="my-btn-unread">
+                            <img src="assets/images/unread-btn.png" alt="" class="unread-btn">
+                            <h5>unread</h5>
+                        </div>
+                    </div>
+                    <div class="my-btn">
+                        <div class="my-btn-read">
+                            <img src="assets/images/read-btn.png" alt="" class="read-btn">
+                            <h5>read</h5>
+                        </div>
+                        <div class="my-btn-add">
+                            <img src="assets/images/add-btn.png" alt="" class="add-btn" id="add-btn">
+                            <h5>add</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="container">
+                    <h1>Rak Bukumu</h1>
+
+                    <form id="filter-view">
+                        <div class="input-group">
+                            <input type="text" id="filter-title" placeholder="Title" class="input-form" maxlength="120"
+                                pattern="^[a-zA-Z0-9_ ]*$" required />
+                        </div>
+                        <div class="button-group">
+                            <button type="submit" id="search" class="search">search</button>
+                        </div>
+                    </form>
+
+                    <div class="content-book">
+                        <div class="unread" id="unread">
+                            <h4>Unread</h4>
+                        </div>
+                        <div class="read" id="read">
+                            <h4>Read</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="formBook">
+        <section class="container">
+            <h2>Add your Book</h2>
+            <form id="form">
+                <div class="input-group">
+                    <input type="text" id="title" placeholder="Title" class="input-form" maxlength="120"
+                        pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" id="author" placeholder="Author" class="input-form" maxlength="60"
+                        pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="date" id="year" class="input-form" min="1900" max="2026" required />
+                </div>
+                <div class="button-group">
+                    <button type="reset" class="close" id="close">close</button>
+                    <button type="submit" id="save" class="save">save</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script src="assets/data.js"></script>
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
