@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#game {
+    margin: auto;
+    margin-top: 100px;
+    width: 1204px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#character {
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: calc(100% - 50px);
+    left: 30px;
+}
+
+.jump-animation {
+    animation: jump 1s;
+}
+
+#block {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    left: calc(100% - 20px);
+    top: calc(100% - 70px);
+    /* z-index: -1; */
+    animation: block 3s 1s infinite linear;
+}
+
+@keyframes jump {
+    0% {
+        top: calc(100% - 50px);
+    }
+
+    30% {
+        top: 100px;
+    }
+
+    70% {
+        top: 100px;
+    }
+
+    100% {
+        top: calc(100% - 50px);
+    }
+
+}
+
+@keyframes block {
+    0% {
+        left: calc(100% - 20px);
+    }
+
+    100% {
+        left: calc(0px);
+    }
+}
